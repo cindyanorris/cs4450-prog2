@@ -23,7 +23,8 @@ else:
        cachedir = cacheDir()
        cachedir.clean()
     else:
-       client = proxyClient(sys.argv[1])
+       cachedir = cacheDir()
+       client = proxyClient(sys.argv[1], cachedir)
        client.getObject()
 
 
